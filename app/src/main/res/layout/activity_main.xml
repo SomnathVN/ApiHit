@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -12,14 +13,14 @@
         android:visibility="gone" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
         android:id="@+id/header"
-        android:text="TODAYSNEWZ"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:paddingLeft="10dp"
         android:paddingTop="20dp"
-        android:textSize="20dp"
-        android:textFontWeight="900"/>
+        android:text="The Daily  Buzz "
+        android:textFontWeight="900"
+        android:textSize="20dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
