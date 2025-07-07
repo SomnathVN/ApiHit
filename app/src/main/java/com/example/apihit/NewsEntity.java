@@ -16,6 +16,7 @@ public class NewsEntity {
     private String urlToImage;
     private String publishedAt;
 
+
     public NewsEntity(String title, String source, String author, String description, String url, String urlToImage, String publishedAt) {
         this.title = title;
         this.source = source;

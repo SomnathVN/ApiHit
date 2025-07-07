@@ -3,29 +3,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:fitsSystemWindows="true">
+    android:padding="20dp"
+    android:background="#f5f5f5">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
+    <!-- Header -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Information Form"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
         android:layout_gravity="center"
-        android:visibility="gone" />
+        android:layout_marginBottom="30dp" />
 
+    <!-- Name Input -->
     <TextView
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="20dp"
-        android:text="The Daily  Buzz "
-        android:textFontWeight="900"
-        android:textSize="20dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="8dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <EditText
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp" />
+        android:layout_height="50dp"
+        android:hint="Enter your full name"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Email Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter your email address"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Age Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter your age"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Next"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="20dp" />
+
+    <!-- Error Message TextView (initially hidden) -->
+    <TextView
+        android:id="@+id/textViewError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#ff0000"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
 
 </LinearLayout>

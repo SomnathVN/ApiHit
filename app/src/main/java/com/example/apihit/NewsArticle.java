@@ -9,6 +9,7 @@ public class NewsArticle {
     private String urlToImage;
     private String publishedAt;
 
+
     public Source getSource() { return source; }
     public String getAuthor() { return author; }
     public String getTitle() { return title; }
