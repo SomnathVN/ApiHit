@@ -8,6 +8,7 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.internal.EverythingIsNonNull;
 
 public class StudentRepository {
     private final StudentApiService apiService;
@@ -20,7 +21,8 @@ public class StudentRepository {
     }
 
     public void addStudent(Student student, StudentAddCallback callback) {
-        apiService.addStudent(student).enqueue(new Callback<Void>() {
+        apiService.addStudent(student).enqueue(new Callback<>() {
+            @EverythingIsNonNull
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
@@ -34,13 +36,6 @@ public class StudentRepository {
                             .addOnSuccessListener(documentReference -> callback.onSuccess())
                             .addOnFailureListener(e -> {
                                 Log.e("FirestoreError", "Failed to add student", e); // Stack trace
-                                if (e != null) {
-                                    Log.e("FirestoreError", "Exception class: " + e.getClass().getName());
-                                    Log.e("FirestoreError", "Exception toString: " + e.toString());
-                                    Log.e("FirestoreError", "Exception message: " + e.getMessage());
-                                } else {
-                                    Log.e("FirestoreError", "Exception is null!");
-                                }
                                 callback.onFailure(e);
                             });
                     Log.d("FirestoreData", "Student map: " + studentMap);
@@ -48,6 +43,7 @@ public class StudentRepository {
                     callback.onFailure(new Exception("API error: " + response.code()));
                 }
             }
+            @okhttp3.internal.annotations.EverythingIsNonNull
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
                 callback.onFailure(new Exception(t));
