@@ -1,4 +1,4 @@
-package com.example.apihit;
+package com.example.apihit.presentation;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.apihit.R;
+import com.example.apihit.database.NewsEntity;
 import com.squareup.picasso.Picasso;
 import java.util.List;
 

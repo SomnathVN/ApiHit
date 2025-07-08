@@ -1,4 +1,6 @@
-package com.example.apihit;
+package com.example.apihit.retrofit;
+
+import com.example.apihit.domain.model.NewsResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

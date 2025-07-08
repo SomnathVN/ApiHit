@@ -1,24 +1,20 @@
-package com.example.apihit;
+package com.example.apihit.presentation;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import java.util.ArrayList;
-import java.util.List;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+
 import android.widget.EditText;
+
+import com.example.apihit.R;
+import com.example.apihit.data.StudentRepository;
+import com.example.apihit.domain.model.Student;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         initializeViews();
 
         // Initialize the new student repository
-        studentRepository = new StudentRepository();
+        studentRepository = new StudentRepository(getApplicationContext());
 
         // Set click listener for Next button
         buttonNext.setOnClickListener(new View.OnClickListener() {
@@ -151,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Start next activity
         startActivity(intent);
+        finish();
     }
 
     // Optional: Clear all fields

@@ -1,4 +1,4 @@
-package com.example.apihit;
+package com.example.apihit.domain.model;
 
 import java.util.List;
 

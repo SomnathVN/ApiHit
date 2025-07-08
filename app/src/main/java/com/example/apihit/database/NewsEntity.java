@@ -1,4 +1,4 @@
-package com.example.apihit;
+package com.example.apihit.database;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

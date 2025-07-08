@@ -1,4 +1,4 @@
-package com.example.apihit;
+package com.example.apihit.domain.model;
 
 public class Student {
     private String name;

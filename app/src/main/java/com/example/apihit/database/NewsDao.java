@@ -1,4 +1,4 @@
-package com.example.apihit;
+package com.example.apihit.database;
 
 import android.util.Log;
 
